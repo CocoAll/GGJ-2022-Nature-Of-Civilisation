@@ -12,9 +12,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Building buildingToConstruct;
 
+    [SerializeField]
+    private BuildingReference selectedBuilding;
+
+    [SerializeField]
+    private SignalSender resourcesUpdated;
+
     Tile hoverTile;
     PlayerInputs inputs;
-    Mouse mouse;
 
     private void Awake()
     {
@@ -43,12 +48,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnBuildingSelected()
+    {
+        if(selectedBuilding.building != null)
+        {
+            bool canBeBuild = true;
+            foreach(ResourceCostStruct resourceCost in selectedBuilding.building.resourceCosts)
+            {
+                if(resourceCost.resource.quantity < resourceCost.Count)
+                {
+                    canBeBuild = false;
+                    break;
+                }
+            }
+            if (canBeBuild)
+            {
+                buildingToConstruct = selectedBuilding.building;
+            }
+        }
+    }
 
     private void OnMousePressed()
     {
-        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null && buildingToConstruct.types.Contains(hoverTile.type))
+        if (hoverTile == null || !hoverTile.IsBuildable() | buildingToConstruct == null) return;
+
+        foreach (ResourceCostStruct resourceCost in buildingToConstruct.resourceCosts)
+        {
+            resourceCost.resource.quantity -= resourceCost.Count;
+        }
+        resourcesUpdated.Raise();
+
+        if (buildingToConstruct.types.Contains(hoverTile.type) && !buildingToConstruct.overrideTile)
         {
             ConstructBuilding((NatureTile)hoverTile);
+        }
+        else if (buildingToConstruct.types.Contains(hoverTile.type) && buildingToConstruct.overrideTile)
+        {
+            ConstructBuilding(hoverTile, buildingToConstruct);
         }
         else
         {
@@ -61,9 +97,16 @@ public class PlayerController : MonoBehaviour
         Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.Ressource.name);
         tile.ConstructOnTile(buildingToConstruct);
         
-        GameObject buildingobj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
-        
+        GameObject buildingObj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
+        GameController.addNaturalTileWithBuilding(tile);
         buildingToConstruct = null;
+    }
+
+    private void ConstructBuilding(Tile tile, Building building)
+    {
+        BuildingTile buildingObj = Instantiate(building.buildingPrefab, tile.transform.position, tile.transform.rotation).GetComponent<BuildingTile>();
+        GameController.addBuildingTile(buildingObj);
+        GridManager.UpdateGridElement(buildingObj);
     }
 
     private void OnEnable()

@@ -10,23 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878e3b738131a0e45b63fd70bbe0d4ad, type: 3}
-  m_Name: Building
+  m_Name: Building 9
   m_EditorClassIdentifier: 
   name: testBuilding
   icon: {fileID: 0}
-  types: 010000000200000004000000
+  types: 
   buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  resource: {fileID: 0}
+  price: 0
   resourceCosts:
-  - resource: {fileID: 11400000, guid: 1d66b19dc95203e409dd8fe40fe5059c, type: 2}
+  - resource: {fileID: 0}
     Count: 0
-  - resource: {fileID: 11400000, guid: f6e4e660fe82e614e84b8fddc67d2585, type: 2}
+  - resource: {fileID: 0}
     Count: 0
   income:
-  - resource: {fileID: 11400000, guid: 1d66b19dc95203e409dd8fe40fe5059c, type: 2}
-    Count: 2
-  - resource: {fileID: 11400000, guid: f6e4e660fe82e614e84b8fddc67d2585, type: 2}
-    Count: 2
-  passiveCost: []
+  - resource: {fileID: 0}
+    Count: 0
+  - resource: {fileID: 0}
+    Count: 0
+  passiveCost:
+  - resource: {fileID: 0}
+    Count: 0
+  - resource: {fileID: 0}
+    Count: 0
   Ameliorations:
   - building: {fileID: 0}
     ressourceCosts: []

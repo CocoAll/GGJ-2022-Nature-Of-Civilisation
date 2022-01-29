@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        naturalTilesWithBuilding = new List<NatureTile>();
+        buildingTiles = new List<BuildingTile>();
         foreach (Resource resource in resources)
         {
             resource.quantity = 0;
@@ -102,6 +104,7 @@ public class GameController : MonoBehaviour
 
     public static void addBuildingTile(BuildingTile tile)
     {
+
         buildingTiles.Add(tile);
     }
 }

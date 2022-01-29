@@ -13,7 +13,7 @@ public class ResourceUIDisplay : MonoBehaviour
     {
         this.resource = resource;
         this.quantityText.text = "0";
-        this.resourceIcon.sprite = null;
+        this.resourceIcon = this.resource.icon;
     }
 
     public void UpdateUI()
