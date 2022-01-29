@@ -24,7 +24,14 @@ public class GameController : MonoBehaviour
         buildingTiles = new List<BuildingTile>();
         foreach (Resource resource in resources)
         {
-            resource.quantity = 0;
+            if(resource.name != "Argent")
+            {
+                resource.quantity = 0;
+            }
+            else
+            {
+                resource.quantity = 10;
+            }
         }
     }
 
@@ -37,9 +44,9 @@ public class GameController : MonoBehaviour
     {
         do
         {
-            yield return new WaitForSeconds(timeBetweenResourcesUpdate);
             CalculResourceChangement();
             updateResourcesSignal.Raise();
+            yield return new WaitForSeconds(timeBetweenResourcesUpdate);
 
         } while (!isGameOver);
     }
