@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553440069355881493}
   - component: {fileID: 3553440069355881492}
+  - component: {fileID: 1110290350}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -44,4 +45,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  buildingToConstruct: {fileID: 11400000, guid: 44d7459a76005f7489c7c4051d656abc, type: 2}
+  buildingToConstruct: {fileID: 0}
+  selectedBuilding: {fileID: 11400000, guid: 0cf9030758537054da92c60475418823, type: 2}
+  resourcesUpdated: {fileID: 11400000, guid: 2767afe27f621e74c9ea2b58a0198b50, type: 2}
+--- !u!114 &1110290350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553440069355881491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4a6132634dbe64ca452f18527b952b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: ecdfc37a96b62364fbeee13d6d6d7ccc, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3553440069355881492}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnBuildingSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

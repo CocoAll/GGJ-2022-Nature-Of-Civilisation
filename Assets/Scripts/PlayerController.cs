@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         inputs = new PlayerInputs();
-
         inputs.Inputs.Action.performed += _ => OnMousePressed();
     }
 
@@ -50,19 +49,24 @@ public class PlayerController : MonoBehaviour
 
     public void OnBuildingSelected()
     {
+        Debug.Log("1");
         if(selectedBuilding.building != null)
         {
             bool canBeBuild = true;
             foreach(ResourceCostStruct resourceCost in selectedBuilding.building.resourceCosts)
             {
-                if(resourceCost.resource.quantity < resourceCost.Count)
+                Debug.Log("2");
+                if (resourceCost.resource.quantity < resourceCost.Count)
                 {
                     canBeBuild = false;
+                    Debug.Log("3");
                     break;
                 }
             }
+            Debug.Log("4");
             if (canBeBuild)
             {
+                Debug.Log("5");
                 buildingToConstruct = selectedBuilding.building;
             }
         }
@@ -72,19 +76,18 @@ public class PlayerController : MonoBehaviour
     {
         if (hoverTile == null || !hoverTile.IsBuildable() | buildingToConstruct == null) return;
 
-        foreach (ResourceCostStruct resourceCost in buildingToConstruct.resourceCosts)
+        if (buildingToConstruct.types.Contains(hoverTile.type))
         {
-            resourceCost.resource.quantity -= resourceCost.Count;
-        }
-        resourcesUpdated.Raise();
+            if (!buildingToConstruct.overrideTile) ConstructBuilding((NatureTile)hoverTile);
+            else ConstructBuilding(hoverTile, buildingToConstruct);
+ 
+            foreach (ResourceCostStruct resourceCost in buildingToConstruct.resourceCosts)
+            {
+                resourceCost.resource.quantity -= resourceCost.Count;
+            }
+            resourcesUpdated.Raise();
 
-        if (buildingToConstruct.types.Contains(hoverTile.type) && !buildingToConstruct.overrideTile)
-        {
-            ConstructBuilding((NatureTile)hoverTile);
-        }
-        else if (buildingToConstruct.types.Contains(hoverTile.type) && buildingToConstruct.overrideTile)
-        {
-            ConstructBuilding(hoverTile, buildingToConstruct);
+            buildingToConstruct = null;
         }
         else
         {
@@ -94,17 +97,17 @@ public class PlayerController : MonoBehaviour
 
     private void ConstructBuilding(NatureTile tile)
     {
-        Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.Ressource.name);
+        Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.name);
         tile.ConstructOnTile(buildingToConstruct);
         
         GameObject buildingObj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
         GameController.addNaturalTileWithBuilding(tile);
-        buildingToConstruct = null;
     }
 
     private void ConstructBuilding(Tile tile, Building building)
     {
         BuildingTile buildingObj = Instantiate(building.buildingPrefab, tile.transform.position, tile.transform.rotation).GetComponent<BuildingTile>();
+        buildingObj.Building = building;
         GameController.addBuildingTile(buildingObj);
         GridManager.UpdateGridElement(buildingObj);
     }

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878e3b738131a0e45b63fd70bbe0d4ad, type: 3}
+  m_Name: Maison
+  m_EditorClassIdentifier: 
+  name: Maison
+  icon: {fileID: 0}
+  types: 010000000200000004000000
+  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  resourceCosts: []
+  income:
+  - resource: {fileID: 11400000, guid: e63b2ad833682424ebc7ca01bd4ffeb3, type: 2}
+    Count: 3
+  - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
+    Count: 20
+  passiveCost:
+  - resource: {fileID: 11400000, guid: 8b432d5b185069e49b8b0150d7b0e1c5, type: 2}
+    Count: 2
+  - resource: {fileID: 11400000, guid: 933377fefbc3f494c811d220d1372b62, type: 2}
+    Count: 3
+  Ameliorations:
+  - building: {fileID: 11400000, guid: bb86dcdc065e11d44affe648f83a0eb5, type: 2}
+    ressourceCosts:
+    - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
+      Count: 100
+    - resource: {fileID: 11400000, guid: 167e6e8b9e0e1764cad2e1f290fee27a, type: 2}
+      Count: 20
+    - resource: {fileID: 11400000, guid: f69ff5293c00fba43bacce23ffd4b1fa, type: 2}
+      Count: 20
+  overrideTile: 1

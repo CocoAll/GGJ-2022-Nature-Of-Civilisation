@@ -7,7 +7,7 @@ public class BuildingTile : Tile
     [SerializeField]
     private Building building;
 
-    public Building Building { get { return building; } }
+    public Building Building { get { return building; } set { if (building == null) this.building = value; } }
 
     public override bool IsBuildable()
     {
