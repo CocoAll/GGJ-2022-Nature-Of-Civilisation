@@ -5,7 +5,7 @@ using UnityEngine;
 public class NatureTile : Tile
 {
     [SerializeField]
-    private Ressource ressource;
+    private Resource ressource;
     [SerializeField]
     private float amountRessourceAvailable;
     [SerializeField]
@@ -14,7 +14,7 @@ public class NatureTile : Tile
     private Building building;
 
     public Building Building { get { return building; } }
-    public Ressource Ressource { get { return ressource; } }
+    public Resource Ressource { get { return ressource; } }
     public float AmountRessourceAvailable { get { return amountRessourceAvailable; } }
 
     public override bool IsBuildable()

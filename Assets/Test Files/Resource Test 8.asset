@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf4d4ae011bcb194da9f22c1ff360116, type: 3}
-  m_Name: Ressource
+  m_Name: Resource Test 8
   m_EditorClassIdentifier: 
-  name: testRessource
+  name: 
+  quantity: 0
+  icon: {fileID: 0}
