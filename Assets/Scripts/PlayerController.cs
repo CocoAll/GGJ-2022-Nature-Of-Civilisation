@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMousePressed()
     {
-        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null)
+        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null && buildingToConstruct.type == hoverTile.type)
         {
             ConstructBuilding((NatureTile)hoverTile);
         }
@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.Ressource.name);
         tile.ConstructOnTile(buildingToConstruct);
+        
+        GameObject buildingobj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
+        
         buildingToConstruct = null;
     }
 

@@ -13,6 +13,7 @@ public class NatureTile : Tile
     [SerializeField]
     private Building building;
 
+    
     public Building Building { get { return building; } }
     public Resource Ressource { get { return ressource; } }
     public float AmountRessourceAvailable { get { return amountRessourceAvailable; } }
