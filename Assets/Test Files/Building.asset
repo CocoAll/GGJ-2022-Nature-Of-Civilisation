@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Building
   m_EditorClassIdentifier: 
   name: testBuilding
+  type: 1
   buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
   resource: {fileID: 0}
   price: 0

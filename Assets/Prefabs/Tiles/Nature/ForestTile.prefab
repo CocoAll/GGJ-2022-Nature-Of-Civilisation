@@ -112,3 +112,4 @@ MonoBehaviour:
   amountRessourceAvailable: 0
   isBuildable: 1
   building: {fileID: 0}
+  type: 2
