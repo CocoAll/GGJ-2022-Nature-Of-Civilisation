@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Camera camera;
 
-    private Tile tileToConstruct;
+    [SerializeField]
+    private Building buildingToConstruct;
 
+    Tile hoverTile;
     PlayerInputs inputs;
     Mouse mouse;
 
@@ -24,19 +26,41 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnMousePressed()
-    {
         RaycastHit hit;
         Ray ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
-            GameObject go = hit.transform.gameObject;
-            Debug.Log(go.name + " : " + go.transform.position);
+            Tile tile = hit.transform.gameObject.GetComponent<Tile>();
+            if(hoverTile == null || hoverTile != tile)
+            {
+                hoverTile = tile;
+            }
         }
+        else if(hoverTile != null)
+        {
+            hoverTile = null;
+        }
+    }
+
+
+    private void OnMousePressed()
+    {
+        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null)
+        {
+            ConstructBuilding((NatureTile)hoverTile);
+        }
+        else
+        {
+            Debug.Log("Nothing to construct");
+        }
+    }
+
+    private void ConstructBuilding(NatureTile tile)
+    {
+        Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.Ressource.name);
+        tile.ConstructOnTile(buildingToConstruct);
+        buildingToConstruct = null;
     }
 
     private void OnEnable()
