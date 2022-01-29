@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,5 +6,30 @@ using UnityEngine;
 public class Building : ScriptableObject
 {
     public string name;
+    public GameObject buildingPrefab;
+    public Resource resource;
+    
+    public int price;
+    
+    public ResourceCostStruct[] resourceCosts = new ResourceCostStruct[2];
+    
+    public Ameliorations[] Ameliorations = new Ameliorations[3];
+    
     public bool overrideTile;
+
+}
+
+[Serializable]
+public struct ResourceCostStruct
+{
+    public Resource resource;
+    public int Count;
+}
+
+
+[Serializable]
+public struct Ameliorations
+{
+    public Building building;
+    public List<ResourceCostStruct> ressourceCosts;
 }
