@@ -12,6 +12,10 @@ public class Building : ScriptableObject
     public int price;
     
     public ResourceCostStruct[] resourceCosts = new ResourceCostStruct[2];
+
+    public ResourceCostStruct[] income = new ResourceCostStruct[2];
+
+    public ResourceCostStruct[] passiveCost = new ResourceCostStruct[2];
     
     public Ameliorations[] Ameliorations = new Ameliorations[3];
     
@@ -25,7 +29,6 @@ public struct ResourceCostStruct
     public Resource resource;
     public int Count;
 }
-
 
 [Serializable]
 public struct Ameliorations
