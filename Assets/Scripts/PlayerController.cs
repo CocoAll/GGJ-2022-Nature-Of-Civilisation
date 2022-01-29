@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMousePressed()
     {
-        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null && buildingToConstruct.type == hoverTile.type)
+        if(hoverTile != null && hoverTile.IsBuildable() && buildingToConstruct != null && buildingToConstruct.types.Contains(hoverTile.type))
         {
             ConstructBuilding((NatureTile)hoverTile);
         }

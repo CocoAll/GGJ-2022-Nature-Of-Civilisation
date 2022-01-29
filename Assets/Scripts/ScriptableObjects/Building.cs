@@ -7,7 +7,7 @@ public class Building : ScriptableObject
 {
     public string name;
 
-    public TypeTile type;
+    public List<TypeTile> types;
     
     public GameObject buildingPrefab;
     public Resource resource;
