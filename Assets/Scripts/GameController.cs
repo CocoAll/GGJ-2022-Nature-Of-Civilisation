@@ -10,9 +10,19 @@ public class GameController : MonoBehaviour
 
     private static List<NatureTile> naturalTilesWithBuilding;
     private static List<BuildingTile> buildingTiles;
+    [SerializeField]
+    private static List<Resource> resources;
 
     [SerializeField]
     private SignalSender updateResourcesSignal;
+
+    private void Awake()
+    {
+        foreach (Resource resource in resources)
+        {
+            resource.quantity = 0;
+        }
+    }
 
     private void Start()
     {
