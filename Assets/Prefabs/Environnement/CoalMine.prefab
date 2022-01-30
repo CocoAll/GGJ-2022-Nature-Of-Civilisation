@@ -7,10 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2551810502177977308, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
     - target: {fileID: 2595193819932792382, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
       propertyPath: m_Name
       value: CoalMine
       objectReference: {fileID: 0}
+    - target: {fileID: 3133519063774756429, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
     - target: {fileID: 3407021131995171972, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,5 +63,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4497307317847327430, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+    - target: {fileID: 8010306790950437270, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4d241c236901af41a256dd0de399ff2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3b3e264b5103fe42b00aaffdbc8d8bd, type: 3}
