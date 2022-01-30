@@ -3,7 +3,57 @@ guid: 58fe070b4a9a6e540b788f88c9292f3e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube15Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube16Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube18Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube19Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube3Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube4Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pCube5Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pDisc1Mat
+    second: {fileID: 2100000, guid: 3f3ff3a32cbaf7544866430966ec000f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scierie_pPlane1Mat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_ScierieMat
+    second: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
