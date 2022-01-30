@@ -295,10 +295,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8334003773486637604, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01c2b27c4dd219e4e873791fe5abfec5, type: 2}
+    - target: {fileID: -825120039129706340, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dd12748bd88b53488acb866e15a8f48, type: 2}
     - target: {fileID: 919132149155446097, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
       propertyPath: m_Name
       value: CentraleACharbon
       objectReference: {fileID: 0}
+    - target: {fileID: 5690394131265064741, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 01c2b27c4dd219e4e873791fe5abfec5, type: 2}
+    - target: {fileID: 7924519794129659229, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4d241c236901af41a256dd0de399ff2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec6cab0cd475c44e9e9f7c957711e53, type: 3}
 --- !u!4 &1890300843922704580 stripped
