@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Raffinerie
   icon: {fileID: 0}
   types: 010000000200000004000000
-  buildingPrefab: {fileID: 8443654938797223040, guid: 1eeff743c543ced4c92359564d3abb98, type: 3}
+  buildingPrefab: {fileID: 1414437055526054724, guid: 0b10c199a8a3c94408a7463edc24b2f6, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 200
