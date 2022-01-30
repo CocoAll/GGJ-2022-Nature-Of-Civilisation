@@ -10,10 +10,12 @@ public class GameController : MonoBehaviour
     private List<Resource> resources;
 
     [SerializeField]
-    private float timeBetweenResourcesUpdate = 1f;
+    private float timeBetweenResourcesUpdate = 0.8f;
 
     [SerializeField]
     private SignalSender updateResourcesSignal;
+    [SerializeField]
+    private SignalSender gameOverSignal;
 
     private static List<NatureTile> naturalTilesWithBuilding;
     private static List<BuildingTile> buildingTiles;
@@ -44,7 +46,7 @@ public class GameController : MonoBehaviour
         if(GameController.currentPlanetHealth / GameController.initialPlanetHealth < 0.1f)
         {
             GameController.isGameOver = true;
-            Debug.Log("It's the end of the world as we know it !!");
+            gameOverSignal.Raise();
             Time.timeScale = 0.0f;
         }
         else
