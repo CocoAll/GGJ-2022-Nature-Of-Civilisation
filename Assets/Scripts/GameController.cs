@@ -122,10 +122,6 @@ public class GameController : MonoBehaviour
             foreach (ResourceCostStruct income in building.income)
             {
                 income.resource.quantity += income.Count;
-                if(income.resource.name != "Argent" && income.resource.name != "Main d'oeuvre")
-                {
-                    amountResourceConsummed += income.Count;
-                }
             }
         }
         ReducePlanetHealth(amountResourceConsummed);
