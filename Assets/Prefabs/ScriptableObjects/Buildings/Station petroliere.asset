@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Station petroliere
   m_EditorClassIdentifier: 
   name: "Station P\xE9troli\xE8re"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 88543b067d42baf439ffce5c4d348533, type: 3}
   types: 400000000100000002000000
   buildingPrefab: {fileID: 4548983492323848315, guid: 5c2827ee0decc36439910da3fb08b08b, type: 3}
   resourceCosts:

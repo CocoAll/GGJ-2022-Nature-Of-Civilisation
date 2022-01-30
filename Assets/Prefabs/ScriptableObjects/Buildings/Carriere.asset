@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carriere
   m_EditorClassIdentifier: 
   name: Carriere
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ea2185cc85f987746bf7e9fadb6c3d56, type: 3}
   types: 04000000
   buildingPrefab: {fileID: 5881055091274407894, guid: 05f0613d26c4bba4cb318f885566b2b6, type: 3}
   resourceCosts:

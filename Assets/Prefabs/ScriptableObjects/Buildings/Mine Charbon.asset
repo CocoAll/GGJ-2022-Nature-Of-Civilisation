@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mine Charbon
   m_EditorClassIdentifier: 
   name: Mine de charbon
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a298238982d1a574ea53c3c57438fdc5, type: 3}
   types: 20000000
   buildingPrefab: {fileID: 7639501337761780349, guid: 6b6890e82e5c4894eab32464123947f7, type: 3}
   resourceCosts:

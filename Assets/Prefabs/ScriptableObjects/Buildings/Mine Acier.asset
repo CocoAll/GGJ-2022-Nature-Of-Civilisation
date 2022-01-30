@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mine Acier
   m_EditorClassIdentifier: 
   name: Mine d'acier
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a298238982d1a574ea53c3c57438fdc5, type: 3}
   types: 10000000
   buildingPrefab: {fileID: 7639501337761780349, guid: 26e0a9848103a704597f3191b84bb9c0, type: 3}
   resourceCosts:

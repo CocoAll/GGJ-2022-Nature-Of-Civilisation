@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Raffinerie
   m_EditorClassIdentifier: 
   name: Raffinerie
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 069b6aedce7660246a528e9e4258a1be, type: 3}
   types: 010000000200000004000000
   buildingPrefab: {fileID: 1414437055526054724, guid: 0b10c199a8a3c94408a7463edc24b2f6, type: 3}
   resourceCosts:

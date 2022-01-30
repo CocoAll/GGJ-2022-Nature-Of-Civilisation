@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chaumiere
   m_EditorClassIdentifier: 
   name: "Chaumi\xE8re"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6a9fa1dd54b37be4fa7e062efe6b7e32, type: 3}
   types: 010000000200000004000000
   buildingPrefab: {fileID: 5202746224556066735, guid: ef059bcd025b72c4eadf52a1511357d6, type: 3}
   resourceCosts:

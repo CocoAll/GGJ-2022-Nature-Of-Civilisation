@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Centrale charbon
   m_EditorClassIdentifier: 
   name: Centrale a charbon
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: bf4dfdd55e8f80a41b468b3d1b5636f4, type: 3}
   types: 010000000200000004000000
   buildingPrefab: {fileID: 1414437055526054724, guid: f73d759de7375854eb7961e321e84b8f, type: 3}
   resourceCosts:

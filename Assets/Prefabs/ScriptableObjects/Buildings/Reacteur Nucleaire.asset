@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Reacteur Nucleaire
   m_EditorClassIdentifier: 
   name: Reacteur Nucleaire
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: db6c607fc0ea8374da86d9a20becc029, type: 3}
   types: 010000000200000004000000
   buildingPrefab: {fileID: 1414437055526054724, guid: 00fa0e99311699d4e9d311c1bcbdd167, type: 3}
   resourceCosts:
