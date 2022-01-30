@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NuclearPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 8025323496355934923, guid: 42b5a34d2a2146642a16ffb95ea11631, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4d241c236901af41a256dd0de399ff2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42b5a34d2a2146642a16ffb95ea11631, type: 3}
 --- !u!4 &6808226226102424163 stripped
