@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Scierie
   icon: {fileID: 0}
   types: 02000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 919132149155446097, guid: 58fe070b4a9a6e540b788f88c9292f3e, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 10

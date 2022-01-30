@@ -49,24 +49,19 @@ public class PlayerController : MonoBehaviour
 
     public void OnBuildingSelected()
     {
-        Debug.Log("1");
         if(selectedBuilding.building != null)
         {
             bool canBeBuild = true;
             foreach(ResourceCostStruct resourceCost in selectedBuilding.building.resourceCosts)
             {
-                Debug.Log("2");
                 if (resourceCost.resource.quantity < resourceCost.Count)
                 {
                     canBeBuild = false;
-                    Debug.Log("3");
                     break;
                 }
             }
-            Debug.Log("4");
             if (canBeBuild)
             {
-                Debug.Log("5");
                 buildingToConstruct = selectedBuilding.building;
             }
         }
@@ -97,9 +92,7 @@ public class PlayerController : MonoBehaviour
 
     private void ConstructBuilding(NatureTile tile)
     {
-        Debug.Log("On va construire " + buildingToConstruct.name + " sur une tile " + tile.name);
         tile.ConstructOnTile(buildingToConstruct);
-        
         GameObject buildingObj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
         GameController.addNaturalTileWithBuilding(tile);
     }
@@ -110,6 +103,7 @@ public class PlayerController : MonoBehaviour
         buildingObj.Building = building;
         GameController.addBuildingTile(buildingObj);
         GridManager.UpdateGridElement(buildingObj);
+        Destroy(tile.gameObject);
     }
 
     private void OnEnable()

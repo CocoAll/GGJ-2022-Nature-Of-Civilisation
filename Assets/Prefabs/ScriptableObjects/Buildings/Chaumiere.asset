@@ -15,7 +15,7 @@ MonoBehaviour:
   name: "Chaumi\xE8re"
   icon: {fileID: 0}
   types: 010000000200000004000000
-  buildingPrefab: {fileID: 8443654938797223040, guid: dddd63ae5dcc8ab4481d43014c48d70d, type: 3}
+  buildingPrefab: {fileID: 5202746224556066735, guid: ef059bcd025b72c4eadf52a1511357d6, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 10

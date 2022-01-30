@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NatureTile : Tile
 {
@@ -11,6 +12,13 @@ public class NatureTile : Tile
     [SerializeField]
     private Building building;
 
+    [SerializeField]
+    private GameObject toDesactivate;
+
+    private void Start()
+    {
+        Debug.Log(this.gameObject.name + " " + toDesactivate);
+    }
 
     public Building Building { get { return building; } set { if (building == null) this.building = value; } }
     public float AmountRessourceAvailable { get { return amountRessourceAvailable; } }
@@ -32,6 +40,10 @@ public class NatureTile : Tile
 
     public void ConstructOnTile(Building building)
     {
+        if(this.toDesactivate != null)
+        {
+            this.toDesactivate.SetActive(false);
+        }
         this.building = building;
         isBuildable = false;
     }

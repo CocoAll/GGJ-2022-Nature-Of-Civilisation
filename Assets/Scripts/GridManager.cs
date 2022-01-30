@@ -35,7 +35,6 @@ public class GridManager : MonoBehaviour
         {
             Vector2 tilePosition = new Vector2(tile.transform.position.x / tileSize, tile.transform.position.z / tileSize);
             grid.Add(tilePosition, tile);
-            //Debug.Log(tilePosition);
         }
     }
 
