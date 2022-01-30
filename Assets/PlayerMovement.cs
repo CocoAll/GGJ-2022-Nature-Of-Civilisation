@@ -16,10 +16,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector2 movementInputs = inputs.Inputs.Movement.ReadValue<Vector2>();
-        Debug.Log(movementInputs);
         Vector3 movement = new Vector3(movementInputs.x, 0.0f, movementInputs.y);
         movement = movement * movementSpeed * Time.deltaTime;
-        Debug.Log(movement);
         this.transform.Translate(movement, Space.World);
     }
 

@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if(GameController.currentPlanetHealth / GameController.initialPlanetHealth < 0.1f)
+        if((float)GameController.currentPlanetHealth / (float)GameController.initialPlanetHealth < 0.1f)
         {
             GameController.isGameOver = true;
             gameOverSignal.Raise();
@@ -122,7 +122,10 @@ public class GameController : MonoBehaviour
             foreach (ResourceCostStruct income in building.income)
             {
                 income.resource.quantity += income.Count;
-                amountResourceConsummed += income.Count;
+                if(income.resource.name != "Argent" && income.resource.name != "Main d'oeuvre")
+                {
+                    amountResourceConsummed += income.Count;
+                }
             }
         }
         ReducePlanetHealth(amountResourceConsummed);

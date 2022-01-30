@@ -14,11 +14,6 @@ public class NatureTile : Tile
     [SerializeField]
     private GameObject toDesactivate;
 
-    private void Start()
-    {
-        Debug.Log(this.gameObject.name + " " + toDesactivate);
-    }
-
     public Building Building { get { return building; } set { if (building == null) this.building = value; } }
 
     public override bool IsBuildable()
