@@ -8,7 +8,7 @@ public class Building : ScriptableObject
 {
     public string name;
 
-    public Image icon;
+    public Sprite icon;
 
     public List<TypeTile> types;
     

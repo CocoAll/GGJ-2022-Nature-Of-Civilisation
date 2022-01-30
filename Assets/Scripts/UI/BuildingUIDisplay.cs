@@ -21,7 +21,7 @@ public class BuildingUIDisplay : MonoBehaviour
     public void SetUpDisplay(Building building)
     {
         this.building = building;
-        this.image = this.building.icon;
+        this.image.sprite = this.building.icon;
         this.name.text = building.name;
 
         this.tooltip.header = building.name;

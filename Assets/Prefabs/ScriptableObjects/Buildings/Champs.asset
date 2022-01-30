@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Champs
   icon: {fileID: 0}
   types: 01000000
-  buildingPrefab: {fileID: 8443654938797223040, guid: 1eeff743c543ced4c92359564d3abb98, type: 3}
+  buildingPrefab: {fileID: 1414437055526054724, guid: d50d1fb88ef19a241a013797d7a6f05e, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 15

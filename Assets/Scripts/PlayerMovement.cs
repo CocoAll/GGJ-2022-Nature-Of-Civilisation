@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerInputs inputs;
-    private float movementSpeed = 10.0f;
+    private float movementSpeed = 20.0f;
     // Start is called before the first frame update
     void Awake()
     {
