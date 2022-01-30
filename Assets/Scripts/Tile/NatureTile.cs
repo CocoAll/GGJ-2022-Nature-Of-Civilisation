@@ -5,8 +5,7 @@ using UnityEngine.Events;
 
 public class NatureTile : Tile
 {
-    [SerializeField]
-    private float amountRessourceAvailable;
+    public int amountRessourceAvailable;
     [SerializeField]
     private bool isBuildable;
     [SerializeField]
@@ -21,7 +20,6 @@ public class NatureTile : Tile
     }
 
     public Building Building { get { return building; } set { if (building == null) this.building = value; } }
-    public float AmountRessourceAvailable { get { return amountRessourceAvailable; } }
 
     public override bool IsBuildable()
     {

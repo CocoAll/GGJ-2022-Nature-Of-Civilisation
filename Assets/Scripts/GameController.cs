@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private bool isGameOver;
+    private static bool isGameOver;
 
     [SerializeField]
     private List<Resource> resources;
@@ -17,6 +17,10 @@ public class GameController : MonoBehaviour
 
     private static List<NatureTile> naturalTilesWithBuilding;
     private static List<BuildingTile> buildingTiles;
+    private static int initialPlanetHealth = 0;
+    private static int currentPlanetHealth = 0;
+
+    private static float timer = 0.0f;
 
     private void Awake()
     {
@@ -30,8 +34,22 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                resource.quantity = 10;
+                resource.quantity = 20;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if(GameController.currentPlanetHealth / GameController.initialPlanetHealth < 0.1f)
+        {
+            GameController.isGameOver = true;
+            Debug.Log("It's the end of the world as we know it !!");
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            GameController.timer += Time.deltaTime;
         }
     }
 
@@ -54,6 +72,7 @@ public class GameController : MonoBehaviour
     //TODO Refacto c'est moche
     private void CalculResourceChangement()
     {
+        int amountResourceConsummed = 0;
         foreach(NatureTile tile in naturalTilesWithBuilding)
         {
             bool canProduce = true;
@@ -76,6 +95,7 @@ public class GameController : MonoBehaviour
             foreach (ResourceCostStruct income in building.income)
             {
                 income.resource.quantity += income.Count;
+                amountResourceConsummed += income.Count;
             }
         }
         foreach (BuildingTile tile in buildingTiles)
@@ -100,8 +120,10 @@ public class GameController : MonoBehaviour
             foreach (ResourceCostStruct income in building.income)
             {
                 income.resource.quantity += income.Count;
+                amountResourceConsummed += income.Count;
             }
         }
+        ReducePlanetHealth(amountResourceConsummed);
     }
 
     public static void addNaturalTileWithBuilding(NatureTile tile)
@@ -113,5 +135,26 @@ public class GameController : MonoBehaviour
     {
 
         buildingTiles.Add(tile);
+    }
+
+    public static void SetInitialPlanetHealth(int init)
+    {
+        GameController.initialPlanetHealth = init;
+        GameController.currentPlanetHealth =  init;
+    }
+
+    public static int GetCurrentPlanetHealth()
+    {
+        return currentPlanetHealth;
+    }
+
+    public static void ReducePlanetHealth(int amount)
+    {
+        GameController.currentPlanetHealth -= amount;
+    }
+
+    public static float GetTimer()
+    {
+        return timer;
     }
 }

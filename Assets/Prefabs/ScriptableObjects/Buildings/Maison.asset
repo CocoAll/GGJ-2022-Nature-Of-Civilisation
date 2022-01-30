@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Maison
   icon: {fileID: 0}
   types: 010000000200000004000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 1414437055526054724, guid: 61b15f73e8881e340a14d2d56f84f57f, type: 3}
   resourceCosts: []
   income:
   - resource: {fileID: 11400000, guid: e63b2ad833682424ebc7ca01bd4ffeb3, type: 2}

@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 16
-  amountRessourceAvailable: 0
+  amountRessourceAvailable: 100
   isBuildable: 1
   building: {fileID: 0}
   toDesactivate: {fileID: 58987755409686680}

@@ -31,16 +31,22 @@ public class GridManager : MonoBehaviour
 
     private void GenerateGridFromExistingTiles()
     {
+        int initialPlanetHealth = 0;
         foreach (Tile tile in this.tileList)
         {
             Vector2 tilePosition = new Vector2(tile.transform.position.x / tileSize, tile.transform.position.z / tileSize);
+            initialPlanetHealth += tile.GetComponent<NatureTile>().amountRessourceAvailable;
             grid.Add(tilePosition, tile);
         }
+        GameController.SetInitialPlanetHealth(initialPlanetHealth);
     }
 
     public static void UpdateGridElement(Tile tile)
     {
         Vector2 tilePosition = new Vector2(tile.transform.position.x / tileSize, tile.transform.position.z / tileSize);
+        Tile oldTile = grid[tilePosition];
+        NatureTile nature = oldTile.GetComponent<NatureTile>();
+        GameController.ReducePlanetHealth(nature.amountRessourceAvailable);
         grid[tilePosition] = tile;
     }
 

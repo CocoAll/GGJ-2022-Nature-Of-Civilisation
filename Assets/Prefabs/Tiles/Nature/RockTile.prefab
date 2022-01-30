@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  amountRessourceAvailable: 0
+  amountRessourceAvailable: 100
   isBuildable: 1
   building: {fileID: 0}
   toDesactivate: {fileID: 5998663384669655572}
