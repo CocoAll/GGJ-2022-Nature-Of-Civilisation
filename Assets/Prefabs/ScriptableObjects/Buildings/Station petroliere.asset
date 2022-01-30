@@ -15,7 +15,7 @@ MonoBehaviour:
   name: "Station P\xE9troli\xE8re"
   icon: {fileID: 0}
   types: 400000000100000002000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 4548983492323848315, guid: 5c2827ee0decc36439910da3fb08b08b, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 100
@@ -28,7 +28,7 @@ MonoBehaviour:
     Count: 10
   passiveCost:
   - resource: {fileID: 11400000, guid: 8b432d5b185069e49b8b0150d7b0e1c5, type: 2}
-    Count: 5
+    Count: 10
   - resource: {fileID: 11400000, guid: e63b2ad833682424ebc7ca01bd4ffeb3, type: 2}
     Count: 5
   Ameliorations: []

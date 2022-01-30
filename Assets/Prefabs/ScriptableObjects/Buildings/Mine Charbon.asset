@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Mine de charbon
   icon: {fileID: 0}
   types: 20000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 7639501337761780349, guid: 6b6890e82e5c4894eab32464123947f7, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 25

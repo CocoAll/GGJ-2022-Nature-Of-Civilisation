@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Mine de Cuivre
   icon: {fileID: 0}
   types: 08000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 7639501337761780349, guid: 44e8e3d9b6505484a93f2c8869232529, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 60

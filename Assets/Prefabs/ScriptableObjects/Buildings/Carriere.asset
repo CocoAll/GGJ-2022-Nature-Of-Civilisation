@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Carriere
   icon: {fileID: 0}
   types: 04000000
-  buildingPrefab: {fileID: 8443654938797223040, guid: 1eeff743c543ced4c92359564d3abb98, type: 3}
+  buildingPrefab: {fileID: 5881055091274407894, guid: 05f0613d26c4bba4cb318f885566b2b6, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 20

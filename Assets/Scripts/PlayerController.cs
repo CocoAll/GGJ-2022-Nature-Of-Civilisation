@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     private void ConstructBuilding(NatureTile tile)
     {
         tile.ConstructOnTile(buildingToConstruct);
-        GameObject buildingObj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform.position, tile.transform.rotation);
+        GameObject buildingObj = Instantiate(buildingToConstruct.buildingPrefab, tile.transform);
         GameController.addNaturalTileWithBuilding(tile);
     }
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Centrale Hydraulique
   icon: {fileID: 0}
   types: 40000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 53238463274527241, guid: 8c9203e8edb58e74095c47b00e609f94, type: 3}
   resourceCosts:
   - resource: {fileID: 11400000, guid: 0f1f1202179f2ac4a9583f8fc1cff522, type: 2}
     Count: 50
