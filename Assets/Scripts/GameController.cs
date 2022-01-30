@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if((float)GameController.currentPlanetHealth / (float)GameController.initialPlanetHealth < 0.1f)
+        if ((float)GameController.currentPlanetHealth / (float)GameController.initialPlanetHealth < 0.1f)
         {
             GameController.isGameOver = true;
             gameOverSignal.Raise();
@@ -71,7 +71,6 @@ public class GameController : MonoBehaviour
         } while (!isGameOver);
     }
 
-    //TODO Refacto c'est moche
     private void CalculResourceChangement()
     {
         int amountResourceConsummed = 0;
@@ -96,8 +95,20 @@ public class GameController : MonoBehaviour
 
             foreach (ResourceCostStruct income in building.income)
             {
-                income.resource.quantity += income.Count;
-                amountResourceConsummed += income.Count;
+                if (tile.amountRessourceAvailable - income.Count >= 0)
+                {
+                    income.resource.quantity += income.Count;
+                    amountResourceConsummed += income.Count;
+                }
+                else
+                {
+                    if(tile.amountRessourceAvailable > 0)
+                    {
+                        income.resource.quantity += tile.amountRessourceAvailable;
+                        amountResourceConsummed += tile.amountRessourceAvailable;
+                        tile.amountRessourceAvailable = 0;
+                    }
+                }  
             }
         }
         foreach (BuildingTile tile in buildingTiles)
