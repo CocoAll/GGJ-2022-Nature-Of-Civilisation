@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Energie
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: dcf9403eedfddda4c9885f38eaacc362, type: 3}

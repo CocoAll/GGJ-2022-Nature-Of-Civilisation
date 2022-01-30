@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Charbon
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 7eb52b20705044142be0a3dc5908af27, type: 3}

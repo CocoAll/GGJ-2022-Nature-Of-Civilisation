@@ -15,7 +15,7 @@ public class ResourceUIDisplay : MonoBehaviour
     {
         this.resource = resource;
         this.quantityText.text = "0";
-        this.resourceIcon = this.resource.icon;
+        this.resourceIcon.sprite = this.resource.icon;
 
         tooltip.header = this.resource.name;
         tooltip.content = "";

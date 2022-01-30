@@ -8,5 +8,5 @@ public class Resource : ScriptableObject
 {
     public string name;
     public int quantity;
-    public Image icon;
+    public Sprite icon;
 }

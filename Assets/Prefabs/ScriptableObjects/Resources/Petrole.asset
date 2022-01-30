@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "P\xE9trole"
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 8aa712e38de18184bb9be4b9925de779, type: 3}

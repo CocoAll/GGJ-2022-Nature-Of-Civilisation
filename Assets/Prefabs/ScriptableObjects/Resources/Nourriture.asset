@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Nourriture
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2dc5aca3d1a233146a49bbcd86fb8c19, type: 3}

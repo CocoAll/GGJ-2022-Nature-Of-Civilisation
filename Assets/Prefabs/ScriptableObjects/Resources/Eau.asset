@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Eau
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e44d6c5a3c8dc3b42990f3779662a20f, type: 3}
