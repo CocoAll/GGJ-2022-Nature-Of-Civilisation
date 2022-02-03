@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Argent
   m_EditorClassIdentifier: 
   name: Argent
-  quantity: 10
+  quantity: 20
   icon: {fileID: 21300000, guid: a3afd794d14e8e046988f625fd13460d, type: 3}
