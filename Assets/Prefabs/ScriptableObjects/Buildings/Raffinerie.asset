@@ -35,3 +35,4 @@ MonoBehaviour:
     Count: 5
   Ameliorations: []
   overrideTile: 1
+  pollutingTile: 1

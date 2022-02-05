@@ -37,3 +37,4 @@ MonoBehaviour:
   - building: {fileID: 0}
     ressourceCosts: []
   overrideTile: 1
+  pollutingTile: 1

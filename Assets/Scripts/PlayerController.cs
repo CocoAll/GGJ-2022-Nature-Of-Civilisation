@@ -84,10 +84,6 @@ public class PlayerController : MonoBehaviour
 
             buildingToConstruct = null;
         }
-        else
-        {
-            Debug.Log("Nothing to construct");
-        }
     }
 
     private void ConstructBuilding(NatureTile tile)

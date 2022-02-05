@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Main d'Oeuvre
   m_EditorClassIdentifier: 
   name: Main d'oeuvre
-  quantity: 0
+  quantity: 9819
   icon: {fileID: 21300000, guid: 86f7911941cc1d24586dab50d99095cc, type: 3}

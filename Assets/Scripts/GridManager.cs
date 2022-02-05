@@ -5,6 +5,9 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     private static int tileSize = 5;
+    private static int width = 0;
+    private static int height = 0;
+
     [SerializeField]
     private List<Tile> tileList;
     private static Dictionary<Vector2, Tile> grid;
@@ -36,6 +39,15 @@ public class GridManager : MonoBehaviour
         {
             Vector2 tilePosition = new Vector2(tile.transform.position.x / tileSize, tile.transform.position.z / tileSize);
             initialPlanetHealth += tile.GetComponent<NatureTile>().amountRessourceAvailable;
+            if(tilePosition.x > width)
+            {
+                width = (int)tilePosition.x;
+            }
+
+            if (tilePosition.y < height)
+            {
+                height = (int)tilePosition.y;
+            }
             grid.Add(tilePosition, tile);
         }
         GameController.SetInitialPlanetHealth(initialPlanetHealth);
@@ -50,4 +62,47 @@ public class GridManager : MonoBehaviour
         grid[tilePosition] = tile;
     }
 
+    public static List<Tile> GetTileNeighbor(Vector2 position)
+    {
+        List<Tile> neighbors = new List<Tile>();
+        position = new Vector2(position.x / tileSize, position.y / tileSize);
+
+        if (position.x - 1 >= 0)
+        {
+            neighbors.Add(grid[new Vector2(position.x - 1, position.y)]);
+        }
+        else
+        {
+            neighbors.Add(grid[new Vector2(width, position.y)]);
+        }
+
+        if (position.x + 1 <= width)
+        {
+            neighbors.Add(grid[new Vector2(position.x + 1, position.y)]);
+        }
+        else
+        {
+            neighbors.Add(grid[new Vector2(0, position.y)]);
+        }
+
+        if (position.y - 1 >= height)
+        {
+            neighbors.Add(grid[new Vector2(position.x, position.y -1)]);
+        }
+        else
+        {
+            neighbors.Add(grid[new Vector2(position.x, 0)]);
+        }
+
+        if (position.y + 1 <= 0)
+        {
+            neighbors.Add(grid[new Vector2(position.x, position.y + 1)]);
+        }
+        else
+        {
+            neighbors.Add(grid[new Vector2(position.x, height)]);
+        }
+
+        return neighbors;
+    }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cuivre
   m_EditorClassIdentifier: 
   name: Cuivre
-  quantity: 0
+  quantity: 9959
   icon: {fileID: 21300000, guid: c6a298ee6fefc0046bacd5e6a627656d, type: 3}

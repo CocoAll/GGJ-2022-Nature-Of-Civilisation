@@ -23,6 +23,7 @@ public class Building : ScriptableObject
     public Ameliorations[] Ameliorations = new Ameliorations[3];
     
     public bool overrideTile;
+    public bool pollutingTile;
 
 }
 

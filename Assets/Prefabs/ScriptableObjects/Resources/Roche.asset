@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Roche
   m_EditorClassIdentifier: 
   name: Roche
-  quantity: 0
+  quantity: 9959
   icon: {fileID: 21300000, guid: e2396066b02ab734d9b2c1cb2761842d, type: 3}

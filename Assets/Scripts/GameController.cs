@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class GameController : MonoBehaviour
     private SignalSender updateResourcesSignal;
     [SerializeField]
     private SignalSender gameOverSignal;
+    [SerializeField]
+    private GameObject wasteTile;
 
     private static List<NatureTile> naturalTilesWithBuilding;
     private static List<BuildingTile> buildingTiles;
@@ -128,6 +131,26 @@ public class GameController : MonoBehaviour
                 }
             }
 
+            if (tile.Building.pollutingTile)
+            {
+                Vector2 tilePos = new Vector2(tile.transform.position.x, tile.transform.position.z);
+                List<Tile> neighbors = GridManager.GetTileNeighbor(tilePos);
+
+                foreach(Tile neighbor in neighbors)
+                {
+                    if(neighbor is NatureTile)
+                    {
+                        NatureTile nature = (NatureTile)neighbor;
+                        nature.amountRessourceAvailable -= 2;
+                        if (nature.amountRessourceAvailable <= 0)
+                        {
+                            NatureTileToWaste(nature);
+                        }
+                    }
+                }
+
+            }
+
             if (!canProduce) continue;
 
             foreach (ResourceCostStruct income in building.income)
@@ -138,6 +161,13 @@ public class GameController : MonoBehaviour
         ReducePlanetHealth(amountResourceConsummed);
     }
 
+    private void NatureTileToWaste(NatureTile nature)
+    {
+        GameObject waste = Instantiate(wasteTile, nature.transform.position, nature.transform.rotation);
+        GridManager.UpdateGridElement(waste.GetComponent<WasteTile>());
+        Destroy(nature.gameObject);
+    }
+
     public static void addNaturalTileWithBuilding(NatureTile tile)
     {
         naturalTilesWithBuilding.Add(tile);
@@ -145,7 +175,6 @@ public class GameController : MonoBehaviour
 
     public static void addBuildingTile(BuildingTile tile)
     {
-
         buildingTiles.Add(tile);
     }
 

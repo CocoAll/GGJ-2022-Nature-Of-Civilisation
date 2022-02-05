@@ -6451,7 +6451,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 100
-  field of view: 54.2
+  field of view: 60
   orthographic: 0
   orthographic size: 13.47
   m_Depth: -1
@@ -19886,6 +19886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1118620750625142489, guid: 0ac6cc9defed62c4bbd2c1367f188eb8, type: 3}
+      propertyPath: wasteTile
+      value: 
+      objectReference: {fileID: 3790213011098344919, guid: c37184a5a040c6a449ec054bdc386763, type: 3}
     - target: {fileID: 1118620750625142489, guid: 0ac6cc9defed62c4bbd2c1367f188eb8, type: 3}
       propertyPath: gameOverSignal
       value: 

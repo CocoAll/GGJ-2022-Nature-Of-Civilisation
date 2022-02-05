@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bois
   m_EditorClassIdentifier: 
   name: Bois
-  quantity: 0
+  quantity: 9999
   icon: {fileID: 21300000, guid: c761a53957e80774abd4f773701891bb, type: 3}
