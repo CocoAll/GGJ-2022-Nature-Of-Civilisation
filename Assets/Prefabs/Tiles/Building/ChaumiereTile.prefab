@@ -1267,8 +1267,6 @@ GameObject:
   - component: {fileID: 3375454821181068144}
   - component: {fileID: 3375454821181068145}
   - component: {fileID: 3375454821181068146}
-  - component: {fileID: 3375454821181068147}
-  - component: {fileID: 8080087427901669547}
   m_Layer: 0
   m_Name: "Chaumi\xE8res"
   m_TagString: Untagged
@@ -1358,33 +1356,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3375454821181068147
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3375454821181068148}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8080087427901669547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3375454821181068148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb555363a1c656044a731342fca3bda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  building: {fileID: 11400000, guid: c5bb7edc05629cf439c22aa1741e51b9, type: 2}
 --- !u!1 &3396395325705360686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4293185448798334668}
   - component: {fileID: 582153896431128944}
+  - component: {fileID: 2301419611232616891}
   m_Layer: 0
   m_Name: ChaumiereTile
   m_TagString: Untagged
@@ -2606,6 +2578,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   building: {fileID: 11400000, guid: c5bb7edc05629cf439c22aa1741e51b9, type: 2}
+--- !u!65 &2301419611232616891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202746224556066735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 4, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5422210604738431180
 GameObject:
   m_ObjectHideFlags: 0

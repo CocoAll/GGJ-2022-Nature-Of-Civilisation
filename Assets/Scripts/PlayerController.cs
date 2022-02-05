@@ -66,9 +66,44 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
+    public bool OnAemliorationSelected(BuildingTile buildingTile)
+    {
+        bool canBeBuild = true;
+        
+        if (buildingTile.Building.Ameliorations.Length == 0)
+        {
+            return false;
+        }
 
+        
+        foreach(ResourceCostStruct resourceCost in buildingTile.Building.Ameliorations[0].ressourceCosts)
+        {
+            if (resourceCost.resource.quantity < resourceCost.Count)
+            {
+                canBeBuild = false;
+                break;
+            }
+        }
+
+        return canBeBuild;
+    }
+    
     private void OnMousePressed()
     {
+        if(!hoverTile.IsNature() && OnAemliorationSelected((BuildingTile) hoverTile))
+        {
+            BuildingTile buildingTile = (BuildingTile) hoverTile;
+            AmeliorationsBuilding(buildingTile);
+            foreach (ResourceCostStruct resourceCost in buildingTile.Building.Ameliorations[0].ressourceCosts)
+            {
+                resourceCost.resource.quantity -= resourceCost.Count;
+            }
+            resourcesUpdated.Raise();
+
+            buildingToConstruct = null;
+        }
+        
         if (hoverTile == null || !hoverTile.IsBuildable() | buildingToConstruct == null) return;
 
         if (buildingToConstruct.types.Contains(hoverTile.type))
@@ -100,6 +135,15 @@ public class PlayerController : MonoBehaviour
         GameController.addBuildingTile(buildingObj);
         GridManager.UpdateGridElement(buildingObj);
         Destroy(tile.gameObject);
+    }
+    
+    private void AmeliorationsBuilding(BuildingTile buildingTile)
+    {
+        BuildingTile buildingObj = Instantiate(buildingTile.Building.Ameliorations[0].building.buildingPrefab, buildingTile.transform.position, buildingTile.transform.rotation).GetComponent<BuildingTile>();
+        buildingObj.Building = buildingTile.Building.Ameliorations[0].building;
+        GameController.addBuildingTile(buildingObj);
+        GridManager.UpdateGridElement(buildingObj);
+        Destroy(buildingTile.gameObject);
     }
 
     private void OnEnable()

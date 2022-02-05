@@ -56,9 +56,12 @@ public class GridManager : MonoBehaviour
     public static void UpdateGridElement(Tile tile)
     {
         Vector2 tilePosition = new Vector2(tile.transform.position.x / tileSize, tile.transform.position.z / tileSize);
-        Tile oldTile = grid[tilePosition];
-        NatureTile nature = oldTile.GetComponent<NatureTile>();
-        GameController.ReducePlanetHealth(nature.amountRessourceAvailable);
+        if (tile.IsNature())
+        {
+            Tile oldTile = grid[tilePosition];
+            NatureTile nature = oldTile.GetComponent<NatureTile>();
+            GameController.ReducePlanetHealth(nature.amountRessourceAvailable);
+        }
         grid[tilePosition] = tile;
     }
 
