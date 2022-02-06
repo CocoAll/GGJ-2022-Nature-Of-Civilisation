@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Immeuble
   icon: {fileID: 0}
   types: 010000000200000004000000
-  buildingPrefab: {fileID: 7268822008107940106, guid: 688b8cd6ab5ea644eb27b715505504ea, type: 3}
+  buildingPrefab: {fileID: 1414437055526054724, guid: 39ca92e8c4a811a4fa14e10f117d5031, type: 3}
   resourceCosts: []
   income:
   - resource: {fileID: 11400000, guid: e63b2ad833682424ebc7ca01bd4ffeb3, type: 2}
@@ -29,12 +29,6 @@ MonoBehaviour:
     Count: 10
   - resource: {fileID: 11400000, guid: f69ff5293c00fba43bacce23ffd4b1fa, type: 2}
     Count: 5
-  Ameliorations:
-  - building: {fileID: 0}
-    ressourceCosts: []
-  - building: {fileID: 0}
-    ressourceCosts: []
-  - building: {fileID: 0}
-    ressourceCosts: []
+  Ameliorations: []
   overrideTile: 1
   pollutingTile: 1
